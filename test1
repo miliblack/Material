@@ -1,0 +1,18 @@
+#! /bin/bash
+
+V1=$(sed -n 1p ~/Desktop/Material/test)
+V2=$(sed -n 2p ~/Desktop/Material/test)
+V3=$(sed -n 3p ~/Desktop/Material/test)
+V4=$(sed -n 4p ~/Desktop/Material/test)
+
+sed -i 's/ /,/g' ~/Desktop/Material/$V1
+sed -i 's/ /,/g' ~/Desktop/Material/$V2
+sed -i 's/ /,/g' ~/Desktop/Material/$V3
+sed -i 's/ /,/g' ~/Desktop/Material/$V4
+
+sed '3d' ~/Desktop/Material/$V1 | sed '7,37d' > 10000
+sed '3d' ~/Desktop/Material/$V2 | sed '7,37d' > 20000
+sed '3d' ~/Desktop/Material/$V3 | sed '7,37d' > 50000
+sed '3d' ~/Desktop/Material/$V4 | sed '7,37d' > 100000
+
+
